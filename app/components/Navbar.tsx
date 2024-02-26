@@ -21,7 +21,7 @@ const Navbar = async () => {
                 <div className="flex items-center gap-x-5">
                     <ThemeToggle />
 
-                    {(await isAuthenticated) ? (
+                    {(await isAuthenticated()) ? (
                         <div className="flex items-center gap-x-5">
                             <LogoutLink>
                                 <Button>Log Out</Button>
