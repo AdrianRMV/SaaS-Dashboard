@@ -3,6 +3,7 @@ import DashboardNav from '../components/DashboardNav';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { redirect } from 'next/navigation';
 import prisma from '../lib/db';
+import { stripe } from '../lib/stripe';
 const getData = async ({
     email,
     id,
@@ -36,6 +37,22 @@ const getData = async ({
                 name: name,
             },
         });
+    }
+
+    // Si el usuario no cuenta con una sesion de stripe, crea una con el correo del usuario y genera su stripeCustomerId
+    if (!user?.stripeCustomerId) {
+        const data = await stripe.customers.create({
+            email: email,
+        });
+        await prisma.user.update({
+            where: {
+                id: id,
+            },
+            data: {
+                stripeCustomerId: data.id,
+            },
+        });
+        console.log('Stripe Acc Done');
     }
 };
 
