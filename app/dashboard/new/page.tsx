@@ -18,7 +18,7 @@ import { redirect } from 'next/navigation';
 import { unstable_noStore as noStore } from 'next/cache';
 
 const NewNoteRoute = async () => {
-    noStore();
+    // noStore();
     const { getUser } = getKindeServerSession();
     const user = await getUser();
 
