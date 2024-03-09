@@ -45,10 +45,12 @@ const DashboardPage = async () => {
 
     return (
         <div className="grid items-start gap-y-8">
-            <div className="flex items-center justify-between px-2">
+            <div className="flex items-center justify-between px-2 gap-x-3 sm:gap-x-0">
                 <div className="grid gap-1">
-                    <h1 className="text-3xl md:text-4xl">Your Notes</h1>
-                    <p className="text-lg text-muted-foreground">
+                    <h1 className="text-xl sm:text-3xl md:text-4xl">
+                        Your Notes
+                    </h1>
+                    <p className="text-xs sm:text-lg text-muted-foreground">
                         Here you can see and create new notes
                     </p>
                 </div>

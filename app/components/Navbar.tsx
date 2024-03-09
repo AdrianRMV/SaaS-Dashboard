@@ -15,9 +15,9 @@ const Navbar = async () => {
 
     return (
         <nav className="border-b bg-background h-[10vh] flex items-center">
-            <div className="container flex items-center justify-between">
+            <div className="container flex items-center justify-between gap-x-5 md:gap-x-0">
                 <Link href="/">
-                    <h1 className="font-bold text-3xl">
+                    <h1 className="font-bold text-xl sm:text-3xl">
                         ARV<span className="text-primary">SAAS</span>
                     </h1>
                 </Link>
@@ -34,7 +34,7 @@ const Navbar = async () => {
                             />
                         </div>
                     ) : (
-                        <div className="flex items-center gap-x-5">
+                        <div className="flex items-center gap-x-2 sm:gap-x-5">
                             <LoginLink>
                                 <Button>Sign In</Button>
                             </LoginLink>
