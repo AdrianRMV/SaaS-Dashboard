@@ -43,6 +43,8 @@ const DashboardPage = async () => {
         revalidatePath('/dashboard');
     };
 
+    console.log(data);
+
     return (
         <div className="grid items-start gap-y-8">
             <div className="flex items-center justify-between px-2 gap-x-3 sm:gap-x-0">
