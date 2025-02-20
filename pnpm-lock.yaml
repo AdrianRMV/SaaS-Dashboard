@@ -50,6 +50,9 @@ importers:
       next-themes:
         specifier: ^0.2.1
         version: 0.2.1(next@14.1.0(@babel/core@7.26.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      prisma:
+        specifier: ^5.22.0
+        version: 5.22.0
       react:
         specifier: ^18
         version: 18.3.1
@@ -87,9 +90,6 @@ importers:
       postcss:
         specifier: ^8
         version: 8.5.2
-      prisma:
-        specifier: ^5.22.0
-        version: 5.22.0
       tailwindcss:
         specifier: ^3.3.0
         version: 3.4.17
